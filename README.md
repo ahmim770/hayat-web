@@ -6,6 +6,12 @@ appointment booking, backed by a MySQL database and a Node.js/Express API with a
 
 ## Pages
 
+<p float="left">
+  <img src="assets/mockup-login.png" width="270" alt="Login screen mockup">
+  <img src="assets/mockup-hospitals.png" width="270" alt="Hospitals list mockup">
+  <img src="assets/mockup-book-appointment.png" width="270" alt="Book appointment mockup">
+</p>
+
 | Page | Purpose |
 |---|---|
 | `index.html` | Landing page |
