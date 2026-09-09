@@ -1,0 +1,13 @@
+
+- Patient:
+  - username: `ahmed_pat`
+  - password: `pass123`
+- Patient:
+  - username: `sara_pat`
+  - password: `pass123`
+- Doctor:
+  - username: `dr_zaki`
+  - password: `pass123`
+- Admin:
+  - username: `admin_hayat`
+  - password: `admin789`

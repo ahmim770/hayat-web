@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayat | Book Appointment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-hospital fs-3 text-primary"></i> Hayat
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hospitals.html">Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold border-bottom border-primary border-2" href="appointment.html">Book Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5 fade-in">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Book Appointment</h2>
+            <p class="text-muted">Schedule your visit with our expert healthcare professionals</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                
+                <!-- Form Card -->
+                <div class="card border-0 shadow-sm p-4 p-md-5 mb-4">
+                    
+                    <!-- Stepper -->
+                    <div class="stepper">
+                        <div class="step active">
+                            <div class="step-number">1</div>
+                            <span>Select Details</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <span>Confirm</span>
+                        </div>
+                    </div>
+
+                    <!-- Appointment Form -->
+                    <form id="appointmentForm">
+                        <div id="appointmentError" class="alert alert-danger d-none" role="alert"></div>
+                        <div class="mb-4">
+                            <label for="hospitalSelect" class="form-label text-muted small fw-medium">Select Hospital</label>
+                            <select class="form-select" id="hospitalSelect" required>
+                                <option value="" selected disabled>Choose a hospital...</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="doctorSelect" class="form-label text-muted small fw-medium">Select Doctor</label>
+                            <select class="form-select" id="doctorSelect" required>
+                                <option value="" selected disabled>Choose a doctor...</option>
+                            </select>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <label for="dateSelect" class="form-label text-muted small fw-medium">Select Date</label>
+                                <input type="date" class="form-control" id="dateSelect" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="timeSelect" class="form-label text-muted small fw-medium">Select Time</label>
+                                <select class="form-select" id="timeSelect" required>
+                                    <option value="" selected disabled>Choose a time...</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="13:00">01:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="additionalInfo" class="form-label text-muted small fw-medium">Additional Information (Optional)</label>
+                            <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Briefly describe your symptoms or reason for visit"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-3 mt-2 fw-bold">Confirm Appointment</button>
+                    </form>
+
+                    <!-- Contact Info Box -->
+                    <div class="mt-4 pt-4 border-top d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-info-circle-fill text-dark fs-5"></i>
+                            <div>
+                                <p class="mb-0 small fw-medium">Need help booking?</p>
+                                <p class="mb-0 small text-muted">Call our appointment hotline at <span class="fw-bold text-dark">904HAYAT</span> or email us at <span class="fw-bold text-dark">appointments@hayat.com</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Action Cards -->
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center gap-3">
+                                <div class="bg-light p-2 rounded">
+                                    <i class="bi bi-check2-square fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">View Schedule</h6>
+                                    <small class="text-muted">Check availability</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center gap-3">
+                                <div class="bg-light p-2 rounded">
+                                    <i class="bi bi-clock-history fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Past Appointments</h6>
+                                    <small class="text-muted">View history</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center gap-3">
+                                <div class="bg-light p-2 rounded">
+                                    <i class="bi bi-person-badge fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Find Doctors</h6>
+                                    <small class="text-muted">Browse specialists</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold"><i class="bi bi-hospital"></i> Hayat</h5>
+                    <p class="mt-3">Your trusted healthcare partner for better health outcomes.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">About Us</a></li>
+                        <li class="mb-2"><a href="#">Services</a></li>
+                        <li class="mb-2"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Health Blog</a></li>
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Connect</h5>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="fs-4"><i class="bi bi-envelope-fill"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Hayat. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

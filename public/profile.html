@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayat | Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-hospital fs-3 text-primary"></i> Hayat
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hospitals.html">Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="appointment.html">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold border-bottom border-primary border-2" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-primary px-4 py-2" href="login.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5 fade-in">
+        <div class="row">
+            <!-- Sidebar / Profile Summary -->
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="card border-0 shadow-sm text-center p-4 h-100">
+                    <div class="doctor-img-placeholder mb-3 mx-auto" style="width: 120px; height: 120px; font-size: 3rem;">
+                        <i class="bi bi-person"></i>
+                    </div>
+                    <h4 class="fw-bold mb-1" id="profileName">-</h4>
+                    <p class="text-muted mb-4" id="profilePatientId">Patient ID: -</p>
+                    
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                            <span class="text-muted"><i class="bi bi-envelope me-2"></i>Email</span>
+                            <span class="fw-medium" id="profileEmail">-</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                            <span class="text-muted"><i class="bi bi-telephone me-2"></i>Phone</span>
+                            <span class="fw-medium" id="profilePhone">-</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                            <span class="text-muted"><i class="bi bi-calendar me-2"></i>DOB</span>
+                            <span class="fw-medium" id="profileDob">-</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-primary w-100 mt-4">Edit Profile</button>
+                </div>
+            </div>
+
+            <!-- Appointments Table -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold mb-0">My Appointments</h4>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-secondary btn-sm" id="exportCsvBtn">Export CSV</button>
+                            <a href="appointment.html" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i> New</a>
+                        </div>
+                    </div>
+
+                    <div id="profileError" class="alert alert-danger d-none" role="alert"></div>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">Date & Time</th>
+                                    <th scope="col">Doctor</th>
+                                    <th scope="col">Hospital</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="appointmentsTbody"></tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Appointments pagination" class="mt-4">
+                        <ul class="pagination pagination-sm justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold"><i class="bi bi-hospital"></i> Hayat</h5>
+                    <p class="mt-3">Your trusted healthcare partner for better health outcomes.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">About Us</a></li>
+                        <li class="mb-2"><a href="#">Services</a></li>
+                        <li class="mb-2"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Health Blog</a></li>
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Connect</h5>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="fs-4"><i class="bi bi-envelope-fill"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Hayat. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

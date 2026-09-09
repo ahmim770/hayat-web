@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayat | Hospitals</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-hospital fs-3 text-primary"></i> Hayat
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold border-bottom border-primary border-2" href="hospitals.html">Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="appointment.html">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <h2 class="mb-4">Hospitals</h2>
+
+        <!-- Search Bar -->
+        <div class="row mb-5 fade-in">
+            <div class="col-md-8 col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-text bg-white text-muted border-end-0">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0 py-2" placeholder="Search hospital">
+                </div>
+            </div>
+        </div>
+
+        <!-- Hospitals Grid -->
+        <div class="row g-4 mb-5">
+            <!-- Hospital Card 1 -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card h-100 p-3">
+                    <div class="hospital-img-placeholder mb-3">
+                        <i class="bi bi-hospital"></i>
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column">
+                        <h5 class="card-title fw-bold">Dallah Hospital</h5>
+                        <p class="card-text text-muted small mb-4">
+                            <i class="bi bi-geo-alt me-1"></i> 123 Main Street, City Center
+                        </p>
+                        <a href="doctors.html" class="btn btn-primary w-100 mt-auto">View Doctors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hospital Card 2 -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card h-100 p-3">
+                    <div class="hospital-img-placeholder mb-3">
+                        <i class="bi bi-hospital"></i>
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column">
+                        <h5 class="card-title fw-bold">Kingdom Hospital</h5>
+                        <p class="card-text text-muted small mb-4">
+                            <i class="bi bi-geo-alt me-1"></i> Al Thoumamah Rd, Ar Rabi, Riyadh 13316
+                        </p>
+                        <a href="doctors.html" class="btn btn-primary w-100 mt-auto">View Doctors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hospital Card 3 -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card h-100 p-3">
+                    <div class="hospital-img-placeholder mb-3">
+                        <i class="bi bi-hospital"></i>
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column">
+                        <h5 class="card-title fw-bold">Alhabib Hospital</h5>
+                        <p class="card-text text-muted small mb-4">
+                            <i class="bi bi-geo-alt me-1"></i> 4592، 7728 King Abdulaziz Rd, Al Ghadir, Riyadh 13311
+                        </p>
+                        <a href="doctors.html" class="btn btn-primary w-100 mt-auto">View Doctors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hospital Card 4 -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card h-100 p-3">
+                    <div class="hospital-img-placeholder mb-3">
+                        <i class="bi bi-hospital"></i>
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column">
+                        <h5 class="card-title fw-bold">King Faisal Specialist Hospital</h5>
+                        <p class="card-text text-muted small mb-4">
+                            <i class="bi bi-geo-alt me-1"></i> Makkah Al Mukarramah Br Rd, Al Mathar Ash Shamali, Riyadh 12713
+                        </p>
+                        <a href="doctors.html" class="btn btn-primary w-100 mt-auto">View Doctors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hospital Card 5 -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card h-100 p-3">
+                    <div class="hospital-img-placeholder mb-3">
+                        <i class="bi bi-hospital"></i>
+                    </div>
+                    <div class="card-body p-0 d-flex flex-column">
+                        <h5 class="card-title fw-bold">King Saud Medical City</h5>
+                        <p class="card-text text-muted small mb-4">
+                            <i class="bi bi-geo-alt me-1"></i> King Saud University Medical City Riyadh - Al-Diriyah.
+                        </p>
+                        <a href="doctors.html" class="btn btn-primary w-100 mt-auto">View Doctors</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Hospital page navigation" class="mb-5 fade-in">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold"><i class="bi bi-hospital"></i> Hayat</h5>
+                    <p class="mt-3">Your trusted healthcare partner for better health outcomes.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">About Us</a></li>
+                        <li class="mb-2"><a href="#">Services</a></li>
+                        <li class="mb-2"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Health Blog</a></li>
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Connect</h5>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="fs-4"><i class="bi bi-envelope-fill"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Hayat. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
